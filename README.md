@@ -2,6 +2,12 @@ Android Volley
 ----------
 This is an unofficial mirror for android volley library.
 
+#####VicV flavor
+
+Basically ripped everything out to add this as a submodule in android studio, but not as a module.
+
+Why? So I can make an android LIBRARY project that contains this instead of requiring transitive dependencies. 
+
 ##Intro
 
 Volley is already deployed to Maven Central:
