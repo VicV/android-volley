@@ -89,7 +89,7 @@ public class VolleyLog {
                 callingClass = callingClass.substring(callingClass.lastIndexOf('.') + 1);
                 callingClass = callingClass.substring(callingClass.lastIndexOf('$') + 1);
 
-                caller = callingClass + "." + trace[i].getMethodName();
+                caller = callingClass + "" + trace[i].getMethodName();
                 break;
             }
         }
