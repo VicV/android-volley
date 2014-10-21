@@ -16,6 +16,7 @@
 
 package com.android.volley.toolbox;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -80,7 +81,7 @@ public abstract class JsonRequest<T> extends Request<T> {
      * @deprecated Use {@link #getBody()}.
      */
     @Override
-    public byte[] getPostBody() {
+    public byte[] getPostBody() throws AuthFailureError {
         return getBody();
     }
 
@@ -90,7 +91,7 @@ public abstract class JsonRequest<T> extends Request<T> {
     }
 
     @Override
-    public byte[] getBody() {
+    public byte[] getBody() throws AuthFailureError {
         try {
             return mRequestBody == null ? null : mRequestBody.getBytes(PROTOCOL_CHARSET);
         } catch (UnsupportedEncodingException uee) {
